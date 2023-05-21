@@ -1,0 +1,51 @@
+
+.name-input {
+    margin-bottom: 10px;
+}
+
+#gameButton {
+    padding: 14px 40px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#choiceButtons {
+    margin-top: 20px;
+}
+
+#displayPlayerChoice,
+#displayComputerChoice {
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+#displayScore {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#displayPlayerScore,
+#displayComputerScore {
+    font-size: 17px;
+}
+
+#displayResult {
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+#displayWinner {
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StenSaxPåse</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <h1>Hej, nu kör vi Sten sax påse!</h1>
+    
+</head>
+<body>
+    <div class="name-input" id="displayInput">
+        <label for="nameInput">Skriv ditt förnamn:</label>
+        <input type="text" id="nameInput">
+        <button onclick="displayName()" id="submit-button">Submit</button>
+    </div>
+
+    <div>
+        <span id="nameDisplay"></span>
+    </div>
+
+    <div id="displayButtonAfterName" class="hidden">
+        <button onclick="gameStart()" id="gameButton">Börja spel</button>
+    </div>
+
+    <div id="gameOverMessage">
+        <p id="displayWinner"></p>
+        <button onclick="restartGame()" id="restartButton" class="hidden">Starta om spelet</button>
+    </div>
+
+    <div>
+        <span id="chooseButton"></span>
+    </div>
+
+    <div id="choiceButtons" class="hidden">
+        <button class="choice-button" data-choice="Sten">Sten</button>
+        <button class="choice-button" data-choice="Sax">Sax</button>
+        <button class="choice-button" data-choice="Påse">Påse</button>
+    </div>
+
+    <div id="displayContainer">
+        <div id="displayPlayerChoice"></div>
+        <div id="displayComputerChoice"></div>
+        <div id="displayResult"></div>
+    </div>
+    
+    <div id="displayScore">
+        <div id="displayPlayerScore"></div>
+        <div id="displayComputerScore"></div>
+    </div>
+    
+</body>
+</html>
