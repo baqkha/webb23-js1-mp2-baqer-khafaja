@@ -7,7 +7,6 @@ let name = "";
 
 function displayName() {
     name = document.getElementById("nameInput").value;
-    //let name = document.getElementById("nameInput").value;
     document.getElementById("nameDisplay").textContent = "Okej " + name + "! " + "Nu kör vi";
 
     let displayButton = document.getElementById("displayButtonAfterName");
@@ -17,11 +16,26 @@ function displayName() {
     displayInput.style.display = "none";
 }
 
+
+// Enter knapp
+document.getElementById("displayInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        displayName();
+    }
+});
+
+// Submit knapp
+document.getElementById("displayInput").addEventListener("submit", function(event) {
+    event.preventDefault();
+    displayName();
+});
+
+
 function savePlayerChoice() {
     playerChoice = this.dataset.choice;
     let displayPlayerChoice = document.getElementById("displayPlayerChoice");
     displayPlayerChoice.textContent = name + "s val: " + playerChoice;
-    //displayPlayerChoice.textContent = "Spelarens val: " + playerChoice;
 
     computerChoiceAndDisplay();
 }
@@ -52,7 +66,7 @@ function determineWinner() {
         (playerChoice === "Sax" && computerChoice === "Påse") ||
         (playerChoice === "Påse" && computerChoice === "Sten")) {
             displayResult.textContent = name + " vann!"
-            //displayResult.textContent = "Spelare vann!"
+
             playerScore++;
             displayResult.style.display = "inline-block";
             displayResult.style.backgroundColor = "green";
@@ -69,7 +83,7 @@ function determineWinner() {
 
     let displayPlayerScore = document.getElementById("displayPlayerScore");
     displayPlayerScore.textContent = name + "s poäng: " + playerScore;
-    //displayPlayerScore.textContent = "Spelarens poäng: " + playerScore;
+
 
     let displayComputerScore = document.getElementById("displayComputerScore");
     displayComputerScore.textContent = "Datorns poäng: " + computerScore;
@@ -113,7 +127,7 @@ function restartGame() {
 
     let displayPlayerChoice = document.getElementById("displayPlayerChoice");
     displayPlayerChoice.textContent = name + "s val: ";
-    //displayPlayerChoice.textContent = "Spelarens val: ";
+
 
     let displayComputerChoice = document.getElementById("displayComputerChoice");
     displayComputerChoice.textContent = "Datorns val: ";
@@ -123,7 +137,7 @@ function restartGame() {
 
     let displayPlayerScore = document.getElementById("displayPlayerScore");
     displayPlayerScore.textContent = name + "s poäng: " + playerScore;
-    //displayPlayerScore.textContent = "Spelarens poäng: " + playerScore;
+
 
     let displayComputerScore = document.getElementById("displayComputerScore");
     displayComputerScore.textContent = "Datorns poäng: " + computerScore;

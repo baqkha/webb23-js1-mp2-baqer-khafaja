@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StenSaxPåse</title>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
     <h1>Hej, nu kör vi Sten sax påse!</h1>
     
 </head>
 <body>
-    <div class="name-input" id="displayInput">
+    <form class="name-input" id="displayInput">
         <label for="nameInput">Skriv ditt förnamn:</label>
         <input type="text" id="nameInput">
-        <button onclick="displayName()" id="submit-button">Submit</button>
-    </div>
-
+        <button type="submit" id="submit-button">Kör</button>
+    </form>
+    
     <div>
         <span id="nameDisplay"></span>
     </div>
